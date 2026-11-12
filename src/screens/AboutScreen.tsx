@@ -233,13 +233,18 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
           </div>
 
           {/* Co-Chairs Leadership Spotlight */}
+
+          <div className="space-y-space-sm pt-space-xs">
+            <div className="flex items-center justify-between">
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-bold">
+                Board Co-chairs
+              </span>
+            </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-           
-            <div className="p-space-md rounded-xl bg-gradient-to-br from-primary/5 via-surface to-surface-container-low border border-primary/20 flex flex-col justify-between shadow-xs">
+
+              <div className="p-space-md rounded-xl bg-gradient-to-br from-primary/5 via-surface to-surface-container-low border border-primary/20 flex flex-col justify-between shadow-xs">
               <div className="space-y-1">
-                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-primary/10 text-primary">
-                  Board Co-chair
-                </div>
                 <h3 className="font-headline-sm text-[16px] font-bold text-primary leading-snug">
                   Patricia C. Dykes, PhD, RN, FAAN, FACMI, FIAHSI
                 </h3>
@@ -251,6 +256,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-0.5 text-secondary font-semibold hover:underline"
                   >
+                    (Profile)
                     <span className="material-symbols-outlined text-[13px]">open_in_new</span>
                   </a>
                 </p>
@@ -259,9 +265,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
 
             <div className="p-space-md rounded-xl bg-gradient-to-br from-primary/5 via-surface to-surface-container-low border border-primary/20 flex flex-col justify-between shadow-xs">
               <div className="space-y-1">
-                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-primary/10 text-primary">
-                  Board Co-chair
-                </div>
+           
                 <h3 className="font-headline-sm text-[16px] font-bold text-primary leading-snug">
                   Luann Whittenburg, PhD, RN, FAAN
                 </h3>
@@ -270,6 +274,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
                 </p>
               </div>
             </div>
+          </div>
           </div>
 
           {/* Board Members Cards (Co-chairs removed from bottom cards) */}
