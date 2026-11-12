@@ -160,7 +160,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
                 Emory University School of Nursing
               </h3>
               <p className="font-body-sm text-body-sm text-surface-container leading-relaxed">
-                Under the leadership of Dr. Suzanne Bakken and the informatics faculty at Emory Nursing, the CCC System continues to evolve as a modern, vendor-neutral standard for EHR interoperability, artificial intelligence research, and global healthcare registries.
+                Under the leadership of Dr. Patricia C. Dykes and the informatics faculty at Emory Nursing, the CCC System continues to evolve as a modern, vendor-neutral standard for EHR interoperability, artificial intelligence research, and global healthcare registries.
               </p>
             </div>
 
