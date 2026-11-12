@@ -79,7 +79,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
               Informatics Reference Notes
             </div>
             <p className="text-xs text-text-muted leading-relaxed">
-              Clinical Care Classification (CCC) System Release 2.5 is maintained under the academic stewardship of Columbia University School of Nursing. Published for nursing professionals, hospital EHR developers, and healthcare research scientists worldwide.
+              Clinical Care Classification (CCC) System Release 2.5 is maintained under the academic stewardship of Emory University School of Nursing. Published for nursing professionals, hospital EHR developers, and healthcare research scientists worldwide.
             </p>
           </div>
         </div>

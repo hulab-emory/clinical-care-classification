@@ -1,5 +1,89 @@
 import React from 'react';
 
+interface BoardMember {
+  id: string;
+  name: string;
+  position: string;
+  isCoChair: boolean;
+  institution?: string;
+  profileUrl?: string;
+}
+
+const BOARD_MEMBERS: BoardMember[] = [
+  {
+    id: 'bakken',
+    name: 'Suzanne Bakken, PhD, MS, FAAN, FACMI, FIAHSI',
+    position: 'Board Member',
+    isCoChair: false,
+    institution: 'Columbia University School of Nursing'
+  },
+  {
+    id: 'davis',
+    name: 'Avaretta Davis, DNP, MS, MHS, RN-BC',
+    position: 'Board Member',
+    isCoChair: false,
+    institution: 'Veterans Health Administration (VHA)'
+  },
+  {
+    id: 'dykes',
+    name: 'Patricia C. Dykes, PhD, RN, FAAN, FACMI, FIAHSI',
+    position: 'Board Co-chair, Emory University School of Nursing (Profile)',
+    isCoChair: true,
+    institution: 'Emory University School of Nursing',
+    profileUrl: 'https://www.nursing.emory.edu/faculty-staff/patti-dykes'
+  },
+  {
+    id: 'harman',
+    name: 'Tiffany Harman, RN, MSN',
+    position: 'Board Member',
+    isCoChair: false
+  },
+  {
+    id: 'hess',
+    name: 'Sherri Hess, MS-IS, BSN, RN-BC, FHIMSS',
+    position: 'Board Member',
+    isCoChair: false
+  },
+  {
+    id: 'johnson',
+    name: 'Steve Johnson, PhD',
+    position: 'Board Member',
+    isCoChair: false
+  },
+  {
+    id: 'kim',
+    name: 'Tae Youn Kim, PhD, RN',
+    position: 'Board Member',
+    isCoChair: false
+  },
+  {
+    id: 'mykkanen',
+    name: 'Minna Mykkanen, MHSc, PhD, RN',
+    position: 'Board Member',
+    isCoChair: false
+  },
+  {
+    id: 'saranto',
+    name: 'Kaija Saranto, PhD, RN, FAAN, FACMI, FIAHSI',
+    position: 'Board Member',
+    isCoChair: false
+  },
+  {
+    id: 'sengstack',
+    name: 'Patricia Sengstack, DNP, RN-BC, FAAN',
+    position: 'Board Member',
+    isCoChair: false
+  },
+  {
+    id: 'whittenburg',
+    name: 'Luann Whittenburg, PhD, RN, FAAN',
+    position: 'Board Co-chair',
+    isCoChair: true
+  }
+];
+
+const REGULAR_BOARD_MEMBERS = BOARD_MEMBERS.filter((m) => !m.isCoChair);
+
 interface AboutScreenProps {
   onNavigate: (screen: 'overview' | 'framework' | 'translations' | 'code-builder' | 'terminology' | 'news' | 'about' | 'contact') => void;
   onOpenTerminology: () => void;
@@ -32,7 +116,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
               About the Clinical Care Classification System
             </h1>
             <p className="font-body-lg text-body-lg text-text-muted leading-relaxed">
-              Maintained in academic partnership with the Columbia University School of Nursing, the CCC System represents over 30 years of continuous clinical ontology research, empowering nurses to document patient care with atomic precision.
+              Maintained in academic partnership with the Emory University School of Nursing, the CCC System represents over 30 years of continuous clinical ontology research, empowering nurses to document patient care with atomic precision.
             </p>
           </div>
         </div>
@@ -40,7 +124,7 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
 
       {/* Main Content Grid */}
       <section className="max-w-7xl mx-auto px-gutter-lg py-space-xl space-y-space-xl">
-        {/* Founder Legacy & Columbia Stewardship Bento */}
+        {/* Founder Legacy & Emory Stewardship Bento */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-stretch">
           <div className="lg:col-span-7 bg-surface-card p-space-xl rounded-2xl shadow-sm border border-border-subtle space-y-space-md flex flex-col justify-between">
             <div className="space-y-space-sm">
@@ -73,17 +157,17 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
                 Institutional Partnership
               </span>
               <h3 className="font-headline-lg text-headline-lg text-white font-bold">
-                Columbia University School of Nursing
+                Emory University School of Nursing
               </h3>
               <p className="font-body-sm text-body-sm text-surface-container leading-relaxed">
-                Under the leadership of Dr. Suzanne Bakken and the informatics faculty at Columbia Nursing, the CCC System continues to evolve as a modern, vendor-neutral standard for EHR interoperability, artificial intelligence research, and global healthcare registries.
+                Under the leadership of Dr. Suzanne Bakken and the informatics faculty at Emory Nursing, the CCC System continues to evolve as a modern, vendor-neutral standard for EHR interoperability, artificial intelligence research, and global healthcare registries.
               </p>
             </div>
 
             <div className="space-y-2 pt-space-xs border-t border-white/20 text-xs">
               <div className="flex items-center justify-between">
                 <span className="text-surface-container-highest">Repository Hub:</span>
-                <span className="font-bold text-white">Columbia Nursing Informatics</span>
+                <span className="font-bold text-white">Emory Center For Data Science</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-surface-container-highest">Version Release:</span>
@@ -132,54 +216,107 @@ export const AboutScreen: React.FC<AboutScreenProps> = ({ onNavigate, onOpenTerm
 
         {/* International Advisory Board */}
         <div className="bg-surface-card p-space-xl rounded-2xl shadow-sm border border-border-subtle space-y-space-lg">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+          {/* Header Row */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md border-b border-border-subtle pb-space-md">
             <div>
-              <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">
+              <div className="inline-flex items-center gap-space-xs px-2.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold mb-2">
+                <span className="material-symbols-outlined text-[16px]">groups</span>
                 Governance &amp; Leadership
-              </span>
+              </div>
               <h2 className="font-headline-lg text-headline-lg text-primary font-bold">
                 International Advisory Board
               </h2>
+              <p className="font-body-sm text-body-sm text-text-muted mt-1 max-w-2xl leading-relaxed">
+                An interdisciplinary council of global nursing informatics leaders, scholars, and clinical terminologists overseeing ontological integrity, standards alignment, and version releases.
+              </p>
             </div>
-            <span className="text-xs text-text-muted">Interdisciplinary Informatics Council</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
-            <div className="p-space-md rounded-xl bg-surface-container-low border border-border-subtle">
-              <div className="font-headline-sm text-[15px] font-bold text-primary">Dr. Suzanne Bakken, PhD, RN, FAAN</div>
-              <div className="font-body-sm text-[13px] text-columbia-crown-blue font-semibold mt-0.5">Alumni Professor of Nursing &amp; Biomedical Informatics</div>
-              <div className="font-body-sm text-xs text-text-muted mt-1">Columbia University School of Nursing</div>
+          {/* Co-Chairs Leadership Spotlight */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+           
+            <div className="p-space-md rounded-xl bg-gradient-to-br from-primary/5 via-surface to-surface-container-low border border-primary/20 flex flex-col justify-between shadow-xs">
+              <div className="space-y-1">
+                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-primary/10 text-primary">
+                  Board Co-chair
+                </div>
+                <h3 className="font-headline-sm text-[16px] font-bold text-primary leading-snug">
+                  Patricia C. Dykes, PhD, RN, FAAN, FACMI, FIAHSI
+                </h3>
+                <p className="font-body-sm text-xs text-text-muted leading-relaxed">
+                  Emory University School of Nursing{' '}
+                  <a
+                    href="https://www.nursing.emory.edu/faculty-staff/patti-dykes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-0.5 text-secondary font-semibold hover:underline"
+                  >
+                    <span className="material-symbols-outlined text-[13px]">open_in_new</span>
+                  </a>
+                </p>
+              </div>
             </div>
 
-            <div className="p-space-md rounded-xl bg-surface-container-low border border-border-subtle">
-              <div className="font-headline-sm text-[15px] font-bold text-primary">Dr. Seth Wolpin, PhD, MPH, RN</div>
-              <div className="font-body-sm text-[13px] text-columbia-crown-blue font-semibold mt-0.5">Clinical Associate Professor</div>
-              <div className="font-body-sm text-xs text-text-muted mt-1">University of Washington School of Nursing</div>
+            <div className="p-space-md rounded-xl bg-gradient-to-br from-primary/5 via-surface to-surface-container-low border border-primary/20 flex flex-col justify-between shadow-xs">
+              <div className="space-y-1">
+                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-primary/10 text-primary">
+                  Board Co-chair
+                </div>
+                <h3 className="font-headline-sm text-[16px] font-bold text-primary leading-snug">
+                  Luann Whittenburg, PhD, RN, FAAN
+                </h3>
+                <p className="font-body-sm text-xs text-text-muted leading-relaxed">
+                  Nursing Informatics Leadership &amp; Ontological Governance
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Board Members Cards (Co-chairs removed from bottom cards) */}
+          <div className="space-y-space-sm pt-space-xs">
+            <div className="flex items-center justify-between">
+              <span className="font-label-sm text-label-sm uppercase tracking-wider text-text-muted font-bold">
+                Board Members
+              </span>
+              <span className="text-xs text-text-muted">
+                {REGULAR_BOARD_MEMBERS.length} Appointed Members
+              </span>
             </div>
 
-            <div className="p-space-md rounded-xl bg-surface-container-low border border-border-subtle">
-              <div className="font-headline-sm text-[15px] font-bold text-primary">Dr. Avaretta Davis, DNP, RN-BC</div>
-              <div className="font-body-sm text-[13px] text-columbia-crown-blue font-semibold mt-0.5">Deputy Chief Nursing Informatics Officer</div>
-              <div className="font-body-sm text-xs text-text-muted mt-1">Veterans Health Administration (VHA)</div>
-            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md">
+              {REGULAR_BOARD_MEMBERS.map((member) => (
+                <div
+                  key={member.id}
+                  className="p-space-md rounded-xl border border-border-subtle bg-surface hover:border-primary/30 transition-all flex flex-col justify-between shadow-xs"
+                >
+                  <div>
 
-            <div className="p-space-md rounded-xl bg-surface-container-low border border-border-subtle">
-              <div className="font-headline-sm text-[15px] font-bold text-primary">Toni J. Laracuente, RN, BSN, CNO</div>
-              <div className="font-body-sm text-[13px] text-columbia-crown-blue font-semibold mt-0.5">Chief Nursing Officer &amp; VP</div>
-              <div className="font-body-sm text-xs text-text-muted mt-1">Medicomp Systems, Inc.</div>
-            </div>
+                    <h4 className="font-headline-sm text-[15px] font-bold text-primary leading-snug">
+                      {member.name}
+                    </h4>
+                     {member.institution && (
+                      <p className="text-xs text-text-muted mt-0.5">{member.institution}</p>
+                    )}
+                  </div>
 
-            <div className="p-space-md rounded-xl bg-surface-container-low border border-border-subtle">
-              <div className="font-headline-sm text-[15px] font-bold text-primary">Dr. Min-Jeoung Kang, PhD, RN</div>
-              <div className="font-body-sm text-[13px] text-columbia-crown-blue font-semibold mt-0.5">Nurse Scientist &amp; Faculty</div>
-              <div className="font-body-sm text-xs text-text-muted mt-1">Harvard Medical School / Brigham and Women's Hospital</div>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="p-space-md rounded-xl bg-surface-container-low border border-border-subtle">
-              <div className="font-headline-sm text-[15px] font-bold text-primary">Samu Mhlambi, RN, BSN, MCiM</div>
-              <div className="font-body-sm text-[13px] text-columbia-crown-blue font-semibold mt-0.5">CEO &amp; Clinical Lead</div>
-              <div className="font-body-sm text-xs text-text-muted mt-1">NurseBrain® Synapse</div>
+          {/* Board Secretariat & Submissions Footer Note */}
+          <div className="p-space-md rounded-xl bg-surface-container-low border border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-space-md text-xs text-text-muted">
+            <div className="flex items-center gap-2">
+              <span className="material-symbols-outlined text-secondary text-[18px]">verified</span>
+              <span>All 11 board appointments confirmed for CCC System Release 2.5 governance cycle.</span>
             </div>
+            <button
+              onClick={() => onNavigate('contact')}
+              className="font-semibold text-primary hover:text-secondary flex items-center gap-1 cursor-pointer transition-colors"
+            >
+              <span>Submit Concept Proposal to Board</span>
+              <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </button>
           </div>
         </div>
 

@@ -104,7 +104,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
 
     setIsSubmitting(true);
 
-    // Simulate network submission to Columbia Nursing CCC repository
+    // Simulate network submission to Emory Nursing CCC repository
     setTimeout(() => {
       const ticketId = `CCC-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
       setSubmittedData({
@@ -165,7 +165,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
                   OFFICIAL INQUIRY PORTAL
                 </span>
                 <span className="px-space-xs py-0.5 rounded text-[11px] font-label-sm bg-surface-container-high text-columbia-crown-blue font-bold border border-border-subtle">
-                  Columbia University School of Nursing
+                  Emory University School of Nursing
                 </span>
                 <span className="text-text-muted text-[12px] font-label-sm">
                   CCC International Advisory Board Secretariat
@@ -202,7 +202,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
                       Thank You, {submittedData.firstName}!
                     </h2>
                     <p className="font-body-sm text-body-sm text-emerald-900 leading-relaxed">
-                      Your message has been transmitted to the Columbia University School of Nursing CCC System team and International Advisory Board Secretariat.
+                      Your message has been transmitted to the Emory University School of Nursing CCC System team and International Advisory Board Secretariat.
                     </p>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
                       type="text"
                       value={formData.firstName}
                       onChange={e => setFormData({ ...formData, firstName: e.target.value })}
-                      placeholder="e.g. Jane"
+                      placeholder="e.g. Virginia"
                       className={`w-full px-space-sm py-2 rounded-lg bg-surface border text-primary font-body-sm focus:outline-none focus:ring-2 ${
                         errors.firstName ? 'border-red-500 ring-red-100' : 'border-border-subtle focus:border-primary focus:ring-primary/20'
                       }`}
@@ -311,7 +311,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
                       type="text"
                       value={formData.lastName}
                       onChange={e => setFormData({ ...formData, lastName: e.target.value })}
-                      placeholder="e.g. Doe"
+                      placeholder="e.g. Saba"
                       className={`w-full px-space-sm py-2 rounded-lg bg-surface border text-primary font-body-sm focus:outline-none focus:ring-2 ${
                         errors.lastName ? 'border-red-500 ring-red-100' : 'border-border-subtle focus:border-primary focus:ring-primary/20'
                       }`}
@@ -368,7 +368,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
                       type="text"
                       value={formData.organization}
                       onChange={e => setFormData({ ...formData, organization: e.target.value })}
-                      placeholder="e.g. Columbia University, Mayo Clinic"
+                      placeholder="e.g. Emory University, Mayo Clinic"
                       className="w-full px-space-sm py-2 rounded-lg bg-surface border border-border-subtle text-primary font-body-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
                     />
                   </div>
@@ -447,7 +447,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
                       className="mt-0.5 rounded text-primary focus:ring-primary border-border-subtle cursor-pointer"
                     />
                     <span>
-                      <strong>Consent to CCC System Newsletter:</strong> I agree to receive periodic announcements and research updates from the Columbia University School of Nursing CCC repository (less than 1 message per month).
+                      <strong>Consent to CCC System Newsletter:</strong> I agree to receive periodic announcements and research updates from the Emory University School of Nursing CCC repository (less than 1 message per month).
                     </span>
                   </label>
 
@@ -534,7 +534,7 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
 
           {/* Right Column: Institutional Stewardship & Contact Info */}
           <div className="lg:col-span-4 space-y-space-md">
-            {/* Columbia Stewardship Card */}
+            {/* Emory Stewardship Card */}
             <div className="bg-surface-card rounded-2xl border border-border-subtle p-space-lg shadow-sm space-y-space-sm">
               <div className="flex items-center gap-2 text-columbia-crown-blue">
                 <span className="material-symbols-outlined text-[22px]">account_balance</span>
@@ -544,22 +544,22 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onNavigate, onOpen
               </div>
 
               <h3 className="font-headline-sm text-headline-sm font-bold text-primary">
-                Columbia University School of Nursing
+                Emory University School of Nursing
               </h3>
 
               <p className="font-body-sm text-body-sm text-text-muted leading-relaxed">
-                The Clinical Care Classification System is maintained under academic custody at Columbia Nursing, continuing the lifelong vision and research of Dr. Virginia K. Saba.
+                The Clinical Care Classification System is maintained under academic custody at Emory Nursing, continuing the lifelong vision and research of Dr. Virginia K. Saba.
               </p>
 
               <div className="space-y-space-xs pt-space-xs text-xs font-body-sm text-text-muted border-t border-border-subtle">
                 <div className="flex items-start gap-2">
                   <span className="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">location_on</span>
-                  <span>560 West 168th Street<br />New York, NY 10032 USA</span>
+                  <span>1520 Clifton Rd NE<br />Atlanta, GA 30322 USA</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-[16px] text-primary shrink-0">mail</span>
-                  <a href="mailto:ccc@nursing.columbia.edu" className="text-columbia-crown-blue hover:underline font-semibold">
-                    ccc@nursing.columbia.edu
+                  <a href="mailto:ccc@nursing.emory.edu" className="text-columbia-crown-blue hover:underline font-semibold">
+                    ccc@nursing.emory.edu
                   </a>
                 </div>
                 <div className="flex items-center gap-2">

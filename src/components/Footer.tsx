@@ -20,12 +20,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTerminology })
             <p className="font-body-sm text-body-sm text-text-muted pr-margin leading-relaxed">
               A standardized, coded nursing terminology that identifies the discrete elements of nursing practice.
               Developed to support electronic health records (EHR) interoperability, clinical decision support, and
-              nursing informatics research in partnership with the Columbia University School of Nursing.
+              nursing informatics research in partnership with the Emory University School of Nursing.
             </p>
             <div className="flex items-center gap-space-sm text-text-muted">
               <span className="font-label-sm text-label-sm uppercase tracking-wide">Institutional Affiliation:</span>
               <span className="font-label-sm text-label-sm text-columbia-crown-blue font-semibold">
-                Columbia University School of Nursing
+                Emory University School of Nursing
               </span>
             </div>
           </div>
@@ -182,7 +182,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTerminology })
         {/* Bottom copyright row */}
         <div className="border-t border-border-subtle pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-text-muted font-body-sm text-body-sm">
           <div>
-            © 2026 Clinical Care Classification System. All rights reserved. Maintained in collaboration with Columbia University School of Nursing.
+            © 2026 Clinical Care Classification System. All rights reserved. Maintained in collaboration with Emory University School of Nursing.
           </div>
           <div className="flex items-center gap-space-lg text-text-muted font-label-sm text-label-sm">
             <button onClick={() => onNavigate('about')} className="hover:text-primary transition-colors cursor-pointer">
@@ -190,9 +190,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenTerminology })
             </button>
             <button onClick={() => onNavigate('about')} className="hover:text-primary transition-colors cursor-pointer">
               Terms of Use
-            </button>
-            <button onClick={() => onNavigate('about')} className="hover:text-primary transition-colors cursor-pointer">
-              Accessibility (WCAG 2.1 AA)
             </button>
           </div>
         </div>

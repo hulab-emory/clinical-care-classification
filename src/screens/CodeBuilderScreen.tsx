@@ -269,7 +269,7 @@ INTERVENTION: [${currentInterv.code}] ${currentInterv.name}${hasCascadingInterv 
 ACTION TYPE: [${actionCode}] ${actionObj.label}
 EVALUATION: [${outcomeCode}] ${outcomeObj.label} (${isGoalMet ? 'Goal met - positive trajectory recorded' : 'Clinical delta recorded'}).`;
 
-  const hl7Snippet = `MSH|^~\\&|CCC_BUILDER|COLUMBIA_NURSING|EPIC_ADT|HOSPITAL_SYS|20261024103000||ADT^A08|MSG000984|P|2.5.1
+  const hl7Snippet = `MSH|^~\\&|CCC_BUILDER|EMORY_NURSING|EPIC_ADT|HOSPITAL_SYS|20261024103000||ADT^A08|MSG000984|P|2.5.1
 PID|1||987654321^^^MRN||DOE^JANE^^^^||19820412|F
 PV1|1|I|4W^402^01||||12345^NURSE_INFORMATICS^^^^|||||||||||IP|||||||||||||||||
 ZCC|1|${componentCode}|${currentComp.name}|${synthesizedDiagCode}|${activeDiagName}|${goalCode}|${goalObj.label}|SNOMED^${activeDiagSnomed}
@@ -458,7 +458,7 @@ ZCI|1|${activeIntervCode}|${activeIntervName}|${actionCode}|${actionObj.label}|$
                   HL7® / FHIR® Ready
                 </span>
                 <span className="text-text-muted text-[12px] font-label-sm">
-                  Columbia Nursing Informatics Pipeline
+                  Emory Center For Data Science Pipeline
                 </span>
               </div>
               <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight font-bold">
@@ -1506,7 +1506,7 @@ ZCI|1|${activeIntervCode}|${activeIntervName}|${actionCode}|${actionObj.label}|$
                   <span className="text-[11px] uppercase font-bold text-text-muted tracking-wider">
                     EHR Mapping Crosswalk
                   </span>
-                  <span className="text-[10px] text-secondary font-semibold">Columbia Terminology</span>
+                  <span className="text-[10px] text-secondary font-semibold">Emory Terminology</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-space-xs">
@@ -2193,7 +2193,7 @@ ZCI|1|${activeIntervCode}|${activeIntervName}|${actionCode}|${actionObj.label}|$
                   Raw Crosswalk Tables
                 </h4>
                 <p className="font-body-sm text-[12px] text-text-muted mt-1">
-                  Download official SNOMED CT and LOINC correlation tables vetted by Columbia Nursing.
+                  Download official SNOMED CT and LOINC correlation tables vetted by Emory Nursing.
                 </p>
               </div>
             </button>

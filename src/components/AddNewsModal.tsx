@@ -14,7 +14,7 @@ const PRESET_IMAGES = [
     caption: 'Modern Clinical Dashboard'
   },
   {
-    label: 'Columbia Campus',
+    label: 'Emory Campus',
     url: 'https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80',
     caption: 'Academic Medical Center'
   },
@@ -38,7 +38,7 @@ export const AddNewsModal: React.FC<AddNewsModalProps> = ({ isOpen, onClose, onA
   const [summary, setSummary] = useState('');
   const [fullContentText, setFullContentText] = useState('');
   const [quote, setQuote] = useState('');
-  const [tagsInput, setTagsInput] = useState('EHR, Columbia, Nursing Informatics');
+  const [tagsInput, setTagsInput] = useState('EHR, Emory, Nursing Informatics');
   
   // Image Drag & Drop states
   const [imageUrl, setImageUrl] = useState<string>('');
@@ -198,7 +198,7 @@ export const AddNewsModal: React.FC<AddNewsModalProps> = ({ isOpen, onClose, onA
               type="text"
               value={title}
               onChange={e => setTitle(e.target.value)}
-              placeholder="e.g. Columbia Nursing Announces Multicenter CCC Terminology Study"
+              placeholder="e.g. Emory Nursing Announces Multicenter CCC Terminology Study"
               className={`w-full px-space-sm py-2 rounded-lg bg-surface border text-primary font-body-sm focus:outline-none focus:ring-2 ${
                 errors.title ? 'border-red-500 ring-red-100' : 'border-border-subtle focus:border-primary focus:ring-primary/20'
               }`}
@@ -437,7 +437,7 @@ export const AddNewsModal: React.FC<AddNewsModalProps> = ({ isOpen, onClose, onA
                 type="text"
                 value={tagsInput}
                 onChange={e => setTagsInput(e.target.value)}
-                placeholder="e.g. EHR, Columbia, Research, FHIR"
+                placeholder="e.g. EHR, Emory, Research, FHIR"
                 className="w-full px-space-sm py-2 rounded-lg bg-surface border border-border-subtle text-primary font-body-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
               />
             </div>

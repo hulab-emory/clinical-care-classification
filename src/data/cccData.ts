@@ -545,10 +545,10 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     readTime: '4 min read',
     category: 'system',
     tags: ['Open Access', 'Terminology Tools', 'Governance'],
-    summary: 'Removing barriers to terminology adoption — the Columbia School of Nursing stewardship group has systematically modernized access. CCC terminology files, crosswalk tables, and research datasets are now directly downloadable with no registration, login, or gatekeeping required.',
+    summary: 'Removing barriers to terminology adoption — the Emory School of Nursing stewardship group has systematically modernized access. CCC terminology files, crosswalk tables, and research datasets are now directly downloadable with no registration, login, or gatekeeping required.',
     fullContent: [
       'Effective immediately, all Clinical Care Classification System tables, crosswalks, code builders, and REST API definitions are made freely available under open academic licensing without login or paywalls.',
-      'Our stewardship team at Columbia University School of Nursing believes that open scientific terminology is a prerequisite for equitable healthcare informatics. Researchers and hospital systems can clone, map, and deploy CCC tables immediately.'
+      'Our stewardship team at Emory University School of Nursing believes that open scientific terminology is a prerequisite for equitable healthcare informatics. Researchers and hospital systems can clone, map, and deploy CCC tables immediately.'
     ]
   },
   {
@@ -627,17 +627,17 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     ]
   },
   {
-    id: 'columbia-transition',
-    title: 'CCC System Transitions from HCA to Columbia University School of Nursing',
-    slug: 'ccc-system-columbia-nursing-transition',
+    id: 'emory-transition',
+    title: 'CCC System Transitions from HCA to Emory University School of Nursing',
+    slug: 'ccc-system-emory-nursing-transition',
     author: 'Seth Wolpin',
     date: 'July 12, 2024',
     readTime: '5 min read',
     category: 'system',
     tags: ['Governance Milestone', 'Institutional Stewardship'],
-    summary: 'Stewardship of the Clinical Care Classification System transferred to the Columbia University School of Nursing, led by Dr. Suzanne Bakken. This institutional milestone cements the terminology as an open-access international asset dedicated to open science, vendor-neutral EHR integration, and informatics education.',
+    summary: 'Stewardship of the Clinical Care Classification System transferred to the Emory University School of Nursing, led by Dr. Suzanne Bakken. This institutional milestone cements the terminology as an open-access international asset dedicated to open science, vendor-neutral EHR integration, and informatics education.',
     fullContent: [
-      'Building on the legacy of pioneering informatics architect Dr. Virginia K. Saba, Columbia Nursing establishes a dedicated repository, executive advisory board, and continuous maintenance pipeline.',
+      'Building on the legacy of pioneering informatics architect Dr. Virginia K. Saba, Emory Nursing establishes a dedicated repository, executive advisory board, and continuous maintenance pipeline.',
       'The transition guarantees ongoing maintenance, ANSI recognition, and seamless alignment with evolving HL7 FHIR and ONC standards.'
     ]
   }

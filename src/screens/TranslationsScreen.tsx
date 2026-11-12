@@ -285,7 +285,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
 
   const handleDownload = (filename: string, label: string) => {
     // Generate simulated download blob
-    const content = `Clinical Care Classification (CCC) System v2.5 Linguistic Concordance\nPackage: ${filename}\nTitle: ${label}\nDownloaded: ${new Date().toISOString()}\nLicense: Creative Commons CC BY-NC 4.0\nPartner: Columbia University School of Nursing`;
+    const content = `Clinical Care Classification (CCC) System v2.5 Linguistic Concordance\nPackage: ${filename}\nTitle: ${label}\nDownloaded: ${new Date().toISOString()}\nLicense: Creative Commons CC BY-NC 4.0\nPartner: Emory University School of Nursing`;
     const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -313,7 +313,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
       setProposalInvestigator('');
       setProposalInstitution('');
       setProposalCountry('');
-      showToast('Translation proposal submitted to Columbia Nursing IAB Committee!');
+      showToast('Translation proposal submitted to Emory Nursing IAB Committee!');
     }, 1200);
   };
 
@@ -366,7 +366,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
           <div className="flex items-center gap-space-md">
             <span className="inline-flex items-center gap-1 text-primary font-code-badge font-semibold">
               <span className="w-2 h-2 rounded-full bg-secondary"></span>
-              Columbia University School of Nursing Global Partnership
+              Emory University School of Nursing Global Partnership
             </span>
             <span className="hidden md:inline text-outline-variant">|</span>
             <span className="hidden md:inline">ICN Harmonization Working Group</span>
@@ -524,12 +524,12 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
             <div className="relative w-full lg:w-[480px] h-56 rounded-lg overflow-hidden shadow-sm shrink-0">
               <img
                 className="w-full h-full object-cover"
-                alt="Modern clinical nursing informatics command center at Columbia University School of Nursing, showing nurse researchers analyzing multilingual patient terminology trees on high-resolution curved monitors"
+                alt="Modern clinical nursing informatics command center at Emory University School of Nursing, showing nurse researchers analyzing multilingual patient terminology trees on high-resolution curved monitors"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXJa6hxdBH5OsspmJfZKz59N10xn9So0eiPkQD2YMUgOj03BxOoUNQrUSlla1l3IzbOYOwLiTY1y95ckGwHXCJUS-Z-2Ewz8LrNbdx5rH_tYg07iVrVqloFQSA3KFyfDQf6g5kXKHqkKrQTr-2JiH4BE70oEKbhdufT3tUkeTCRl2bRF_Z17dv_kdNI7slxv-3ZYN81MGZ3qdtyMqfh2V3okuwo5rNGvTmBQZrGj-HpD7Ek8nIMvvnvw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent flex items-end p-space-md">
                 <div className="text-on-primary">
-                  <p className="font-label-md text-label-md font-semibold">Columbia School of Nursing Informatics Laboratory</p>
+                  <p className="font-label-md text-label-md font-semibold">Emory Center For Data Science Laboratory</p>
                   <p className="font-label-sm text-label-sm text-primary-fixed">Host repository for official translation releases &amp; semantic alignment.</p>
                 </div>
               </div>
@@ -971,7 +971,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
                   IAB Ratification &amp; Archival
                 </h3>
                 <p className="font-body-sm text-body-sm text-text-muted mt-2 leading-relaxed">
-                  Submission to the International Advisory Board at Columbia University School of Nursing for final verification, DOI tagging, and publication.
+                  Submission to the International Advisory Board at Emory University School of Nursing for final verification, DOI tagging, and publication.
                 </p>
               </div>
               <div className="pt-space-md mt-space-md border-t border-border-subtle text-label-sm text-secondary font-semibold">
@@ -993,7 +993,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
                 Propose a New Translation or Revision
               </h3>
               <p className="font-body-md text-body-md text-surface-container-high/80 mt-1 leading-relaxed">
-                Is your national informatics society or academic institution interested in translating CCC System v2.5 into German, French, Arabic, or Japanese? Contact the Columbia School of Nursing stewardship committee for authorization packets and terminology crosswalk toolkits.
+                Is your national informatics society or academic institution interested in translating CCC System v2.5 into German, French, Arabic, or Japanese? Contact the Emory School of Nursing stewardship committee for authorization packets and terminology crosswalk toolkits.
               </p>
             </div>
             <div className="shrink-0 flex flex-wrap items-center gap-space-sm">
@@ -1124,7 +1124,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
                     info
                   </span>
                   <div className="text-label-sm text-text-muted leading-snug">
-                    <span className="font-bold text-primary">Commercial Vendors:</span> Commercial software vendors repackaging CCC dictionaries for proprietary licensing should contact Columbia University Licensing.
+                    <span className="font-bold text-primary">Commercial Vendors:</span> Commercial software vendors repackaging CCC dictionaries for proprietary licensing should contact Emory University Licensing.
                   </div>
                 </div>
               </div>
@@ -1283,7 +1283,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
                 <span className="material-symbols-outlined text-emerald-600 text-5xl">task_alt</span>
                 <h4 className="font-headline-sm text-headline-sm text-primary font-bold">Proposal Received!</h4>
                 <p className="font-body-sm text-text-muted max-w-sm">
-                  Thank you for contributing to international nursing informatics. The Columbia School of Nursing committee will review your proposal.
+                  Thank you for contributing to international nursing informatics. The Emory School of Nursing committee will review your proposal.
                 </p>
               </div>
             ) : (
@@ -1385,7 +1385,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
 
             <div className="space-y-3 font-body-sm text-text-muted">
               <p>
-                Our clinical informatics analysts at Columbia School of Nursing provide schema mappings and HL7 / FHIR R4 crosswalk advice for:
+                Our clinical informatics analysts at Emory School of Nursing provide schema mappings and HL7 / FHIR R4 crosswalk advice for:
               </p>
               <ul className="list-disc list-inside space-y-1 font-medium text-primary">
                 <li>Epic Systems (SmartPhrases &amp; Flowsheet Rows)</li>
@@ -1395,7 +1395,7 @@ export const TranslationsScreen: React.FC<TranslationsScreenProps> = ({ onNaviga
               </ul>
               <div className="p-3 bg-surface-container-low rounded-lg border border-border-subtle">
                 <span className="font-semibold text-primary block">Stewardship Office:</span>
-                <span>informatics-liaison@nursing.columbia.edu</span>
+                <span>informatics-liaison@nursing.emory.edu</span>
               </div>
             </div>
 

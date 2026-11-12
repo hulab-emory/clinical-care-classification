@@ -23,16 +23,15 @@ export const FrameworkScreen: React.FC<FrameworkScreenProps> = ({ onNavigate, on
   };
 
   const copyCitation = () => {
-    const text = 'Saba, V. K., & Columbia University School of Nursing. (2026). Clinical Care Classification (CCC) System Manual: A Guide to Nursing Documentation in the Electronic Health Record (Version 2.5). Springer Publishing Company. https://clinicalcareclassification.org/framework/';
+    const text = 'Saba, V. K., & Emory University School of Nursing. (2026). Clinical Care Classification (CCC) System Manual: A Guide to Nursing Documentation in the Electronic Health Record (Version 2.5). Springer Publishing Company. https://clinicalcareclassification.org/framework/';
     navigator.clipboard.writeText(text);
     alert('Academic citation copied to clipboard!');
   };
 
   return (
     <div className="flex flex-col w-full">
-
-      {/* Hero & Primary Architecture Overview */}
-      <section className="w-full bg-surface py-space-xl px-gutter-lg">
+      {/* Top Breadcrumb & Status Ribbon */}
+      <section className="w-full bg-surface-container-low py-space-sm px-gutter-lg border-b border-border-subtle">
         <div className="max-w-[1280px] mx-auto flex flex-wrap items-center justify-between gap-space-sm">
           <nav aria-label="Breadcrumb" className="flex items-center gap-space-xs text-text-muted font-label-sm text-label-sm">
             <button
@@ -56,8 +55,11 @@ export const FrameworkScreen: React.FC<FrameworkScreenProps> = ({ onNavigate, on
             </span>
           </div>
         </div>
-        
-        <div className="max-w-[1280px] mx-auto flex flex-col gap-space-md" style={{ marginTop: "15px" }}>
+      </section>
+
+      {/* Hero & Primary Architecture Overview */}
+      <section className="w-full bg-surface py-space-xl px-gutter-lg">
+        <div className="max-w-[1280px] mx-auto flex flex-col gap-space-md">
           <div className="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
             <span className="material-symbols-outlined text-[20px]">account_tree</span>
             <span>ENTERPRISE CLINICAL ARCHITECTURE • RELEASE 2.5</span>
@@ -986,7 +988,7 @@ export const FrameworkScreen: React.FC<FrameworkScreenProps> = ({ onNavigate, on
                 <span className="font-headline-sm text-headline-sm">Suggested Academic Citation</span>
               </div>
               <div className="p-space-md rounded-xl bg-surface-container-lowest font-mono text-xs text-on-surface leading-relaxed select-all border border-border-subtle">
-                Saba, V. K., &amp; Columbia University School of Nursing. (2026).{' '}
+                Saba, V. K., &amp; Emory University School of Nursing. (2026).{' '}
                 <em>Clinical Care Classification (CCC) System Manual: A Guide to Nursing Documentation in the Electronic Health Record</em>{' '}
                 (Version 2.5). Springer Publishing Company. https://clinicalcareclassification.org/framework/
               </div>

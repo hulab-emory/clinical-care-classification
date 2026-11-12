@@ -146,14 +146,14 @@ export const NewsScreen: React.FC<NewsScreenProps> = ({
             <div className="lg:col-span-8 space-y-space-sm">
               <div className="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container text-columbia-crown-blue rounded font-label-sm text-label-sm uppercase tracking-wider font-semibold">
                 <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                Columbia School of Nursing &amp; CCC Repository
+                Emory School of Nursing &amp; CCC Repository
               </div>
               <h1 className="font-headline-xl text-headline-xl text-primary tracking-tight font-bold">
                 News, Research &amp; System Updates
               </h1>
               <p className="font-body-lg text-body-lg text-text-muted max-w-3xl leading-relaxed">
                 The latest announcements, clinical informatics research, international conference proceedings,
-                and hospital EHR implementations from the Clinical Care Classification System and Columbia University School of Nursing.
+                and hospital EHR implementations from the Clinical Care Classification System and Emory University School of Nursing.
               </p>
             </div>
 
@@ -737,7 +737,7 @@ export const NewsScreen: React.FC<NewsScreenProps> = ({
               </div>
               <p className="font-body-sm text-[12px] leading-relaxed text-on-surface-variant">
                 Bakken, S., Wolpin, S., &amp; Saba, V. K. (2026). <em>Clinical Care Classification (CCC) System: Release 2.5</em>.
-                Columbia University School of Nursing. DOI: 10.7916/d8-ccc-2026.
+                Emory University School of Nursing. DOI: 10.7916/d8-ccc-2026.
               </p>
             </div>
           </aside>
